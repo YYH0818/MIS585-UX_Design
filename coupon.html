@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/coffee-icon.ico">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Café WPI</title>
+</head>
+<body>
+
+<header class="header">
+    <img class="header-logo" src="./img/coffee-logo.png" alt="">
+    <div class="header-bars">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="header-nav">
+        <div class="header-times">
+            <span>&times;</span>
+        </div>
+        <ul class="header-list">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="Product.html">Products</a></li>
+            <li><a href="coupon.html">Coupon</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="coupon">
+    <h2>Get a Coupon</h2>
+    <div class="coupon-show">
+        <input type="text" id="coupon">
+    </div>
+    <div class="coupon-button">
+        <button onclick="couponbutton()">Get Coupon</button>
+    </div>
+</div>
+
+<footer class="footer">
+    <h2>Worcester Polytechnic Institute - UX Design</h2>
+    <div class="info">
+        <p>&copy;2022 Elvis Yu</p>
+    </div>
+</footer>
+
+<script>
+    var str = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    function couponbutton(){
+        var res = "";
+        for(var i = 0; i < 6 ; i ++) {
+            var id = Math.ceil(Math.random()*35);
+            res += str[id];
+        }
+        document.getElementById("coupon").value=res;
+    }
+</script>
+</body>
+</html>
